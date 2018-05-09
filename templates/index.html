@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--移动端禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>余票预警-测试</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default my-nav container">
+        <div class="navbar-header">
+            <a class="navbar-brand img-responsive" href="#">
+                <img src="static/flkjlogo.png" style="height: 32px;width: 62px;" alt="Brand">
+                <a style="color: #e29c00;font-family: 楷体;font-size: 20px" class="navbar-brand">余票预警</a>
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="
+                #bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="history.html" style="font-family: 华文楷体;font-size: 16px"><strong>  历史记录</strong></a></li>
+                <li><a href="kadawo.html" style="font-family: 华文楷体;font-size: 16px"><strong>  kadawo小工具</strong></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                <li><a><i class="glyphicon glyphicon-time"></i> <span id="textClock">2018-05-09 16:30:12</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+</div>
+<div class="content container">
+    <div class="big-machile">
+        <div class="big-header"><h4><i class="glyphicon glyphicon-th-list"></i> 以下为<font color="red">大机器</font>当前预警机器</h4><hr/></div>
+        <div class="content">
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th>机器编号</th>
+                        <th>机器名称</th>
+                        <th>票种</th>
+                        <th>票道</th>
+                        <th>库存</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sds4142312423523523</td>
+                        <td>ds大苏打实打实大苏打实打实大苏打上大苏打实打实的</td>
+                        <td>da威威认为</td>
+                        <td>a</td>
+                        <td>ds</td>
+                    </tr>
+                    <tr>
+                        <td>sds</td>
+                        <td>ds</td>
+                        <td>da</td>
+                        <td>a</td>
+                        <td>ds</td>
+                    </tr>
+                    <tr>
+                        <td>sds</td>
+                        <td>ds</td>
+                        <td>da</td>
+                        <td>a</td>
+                        <td>ds</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<!------------------------------------------------------------------------------------------>
+    <div class="small-machine" style="margin-top: 50px">
+        <div class="small-header"><h4><i class="glyphicon glyphicon-th-list"></i> 以下为<font color="red">小机器</font>当前预警机器</h4><hr/></div>
+        <div class="content">
+            <table class="table table-striped table-responsive">
+                <thead>
+                <tr>
+                    <th>设备id</th>
+                    <th>设备名称</th>
+                    <th>当前票种</th>
+                    <th>当前库存</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>sds4142312423523523</td>
+                    <td>ds大苏打实打实大苏打实打实大苏打上大苏打实打实的</td>
+                    <td>da威威认为</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>sds</td>
+                    <td>ds</td>
+                    <td>da</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>sds</td>
+                    <td>ds</td>
+                    <td>da</td>
+                    <td>a</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript">
+    t=setInterval(function v(){clock();});
+    function clock(){
+        var c=new Date();
+        var m=c.getMinutes();
+        var s=c.getSeconds();
+        var month =c.getMonth()+1;
+        var date =c.getDate();
+        var hours =c.getHours();
+        if(m<10){
+            m="0"+m;
+        }
+        if(s<10){
+            s="0"+s;
+        }
+        if(month<10){
+            month="0"+month
+        }
+        if(date<10){
+            date="0"+date
+        }
+        if(hours<10){
+            hours="0"+hours
+        }
+        document.getElementById("textClock").innerHTML=c.getFullYear()+'-'+month+'-'+date+' '+hours+':'+m+':'+s;
+    }
+</script>
+</body>
+</html>
