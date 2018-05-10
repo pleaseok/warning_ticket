@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--移动端禁止缩放-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>kadawo小工具下载</title>
+    <title>{% block title%}{% endblock%}</title>
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="static/favicon.ico">
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -20,9 +20,9 @@
 <body>
 <div class="navbar navbar-default my-nav container">
     <div class="navbar-header">
-        <a class="navbar-brand img-responsive" href="#">
-            <img src="static/flkjlogo.png" style="height: 32px;width: 62px;" alt="Brand">
-            <a style="color: #e29c00;font-family: 楷体;font-size: 20px" class="navbar-brand">余票预警</a>
+        <a class="navbar-brand img-responsive" href="/">
+            <img src="{{ url_for('static',filename='images/flkjlogo.png') }}" style="height: 32px;width: 62px;" alt="Brand">
+            <a style="color: #e29c00;font-family: 楷体;font-size: 20px" href="/" class="navbar-brand">余票预警</a>
         </a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="
                 #bs-example-navbar-collapse-1" aria-expanded="false">
@@ -35,22 +35,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="history.html" style="font-family: 华文楷体;font-size: 16px"><strong>  历史记录</strong></a></li>
-            <li><a href="kadawo.html" style="font-family: 华文楷体;font-size: 16px"><strong>  kadawo小工具</strong></a></li>
+            <li><a href="/history/" style="font-family: 华文楷体;font-size: 16px"><strong>  历史记录</strong></a></li>
+            <li><a href="/kadawo/" style="font-family: 华文楷体;font-size: 16px"><strong>  kadawo小工具</strong></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
             <li><a><i class="glyphicon glyphicon-time"></i> <span id="textClock">2018-05-09 16:30:12</span></a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
 </div>
-<div class="content container">
 
-</div>
-
+{% block content %}{% endblock %}
 
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
 <script language="javascript" type="text/javascript">
     t=setInterval(function v(){clock();});
     function clock(){
