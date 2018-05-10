@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--移动端禁止缩放-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>{% block title%}{% endblock%}</title>
+    <title>{{ title }}</title>
     <!-- Bootstrap -->
     <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico') }}">

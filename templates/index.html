@@ -15,27 +15,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                {% for b in bigWarning %}
                     <tr>
-                        <td>sds4142312423523523</td>
-                        <td>ds大苏打实打实大苏打实打实大苏打上大苏打实打实的</td>
-                        <td>da威威认为</td>
-                        <td>a</td>
-                        <td>ds</td>
+                        <td>{{ b.id }}</td>
+                        <td>{{ b.address }}</td>
+                        <td>{{ b.ticket }}</td>
+                        <td>{{ b.ticket_tao }}</td>
+                        <td>{{ b.number }}</td>
                     </tr>
-                    <tr>
-                        <td>sds</td>
-                        <td>ds</td>
-                        <td>da</td>
-                        <td>a</td>
-                        <td>ds</td>
-                    </tr>
-                    <tr>
-                        <td>sds</td>
-                        <td>ds</td>
-                        <td>da</td>
-                        <td>a</td>
-                        <td>ds</td>
-                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
         </div>
