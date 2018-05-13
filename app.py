@@ -12,7 +12,6 @@ app.config.from_object(config)
 @app.route("/")
 def index():
     big = BigWarning().get_filter_value()
-    print(big)
     return render_template("index.html", title="余票预警-测试", bigWarning=big)
 
 

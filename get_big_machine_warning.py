@@ -124,6 +124,6 @@ class BigWarning:
         return header
 
 
-if __name__ == '__main__':
-    login = BigWarning()
-    print(login.get_filter_value())
+# if __name__ == '__main__':
+#     login = BigWarning()
+#     print(login.get_filter_value())
