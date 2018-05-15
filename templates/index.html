@@ -42,24 +42,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>sds4142312423523523</td>
-                    <td>ds大苏打实打实大苏打实打实大苏打上大苏打实打实的</td>
-                    <td>da威威认为</td>
-                    <td>a</td>
-                </tr>
-                <tr>
-                    <td>sds</td>
-                    <td>ds</td>
-                    <td>da</td>
-                    <td>a</td>
-                </tr>
-                <tr>
-                    <td>sds</td>
-                    <td>ds</td>
-                    <td>da</td>
-                    <td>a</td>
-                </tr>
+                {% for s in smallWarning %}
+                    <tr>
+                        <td>{{ s.id }}</td>
+                        <td>{{ s.address }}</td>
+                        <td>{{ s.name }}</td>
+                        <td>{{ s.number }}</td>
+                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
         </div>

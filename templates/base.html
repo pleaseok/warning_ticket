@@ -49,6 +49,7 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+{%  block script  %}{% endblock %}
 <script language="javascript" type="text/javascript">
     t=setInterval(function v(){clock();});
     function clock(){

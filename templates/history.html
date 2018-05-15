@@ -55,3 +55,18 @@
     </div>
 </div>
 {% endblock %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/bootstrap-datetimepicker.min.js')}}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap-datetimepicker.zh-CN.js')}}"></script>
+<script>
+    $("input[name='time-control']").datetimepicker({
+        minView : "month", //  选择时间时，最小可以选择到那层；默认是‘hour’也可用0表示
+        language : 'zh-CN', // 语言
+        autoclose : true, //  true:选择时间后窗口自动关闭
+        format : 'yyyy-mm-dd', // 文本框时间格式，
+        todayBtn : true,
+        startDate : 0 ,  // 窗口可选时间从今天开始
+        endDate : new Date()   // 窗口最大时间直至今天
+    })
+</script>
+{% endblock %}
