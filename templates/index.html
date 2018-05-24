@@ -1,6 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="content container">
+    <div class="add-warning">
+        <div class="big-header">
+            <h4>
+                <i class="glyphicon glyphicon-th-list"></i> 以下为<font color="red">自添加的</font>故障机器
+                <button class="pull-right btn btn-default btn-success" data-target="#add_warning" data-toggle="modal">点击添加</button>
+                <form>
+
+                </form>
+            </h4>
+            <hr/>
+        </div>
+        <div class="content">
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th>id/编号</th>
+                        <th>设备地址</th>
+                        <th>处理事项</th>
+                        <th>添加时间</th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td>{</td>
+                        <td> b.address </td>
+                        <td> b.ticket</td>
+                        <td> et_tao </td>
+                        <td> er }</td>
+                    </tr>
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
     <div class="big-machile">
         <div class="big-header"><h4><i class="glyphicon glyphicon-th-list"></i> 以下为<font color="red">大机器</font>当前预警机器（<=20）</h4><hr/></div>
         <div class="content">
