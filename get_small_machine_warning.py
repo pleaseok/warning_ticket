@@ -52,8 +52,8 @@ class SmallWarning:
 
     def get_warning(self):
         # 得到登陆界面的校验值
-        username = 'fulei'
-        password = 'bdxl88888*'
+        username = '' # 用户名
+        password = '' # 密码
         header = self.get_login()
         header.setdefault('Cookie', 'PHPSESSID=%s' % self.cookie)
         response = self.session.get(url=self._loginUrl, headers=header)
