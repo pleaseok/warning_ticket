@@ -15,8 +15,8 @@ class BigWarning:
         """
         :return: [{'id': 'Z1000H4BJ0329', 'address': '长沙一号机', 'ticket': '7', 'ticket_tao': '1排3道', 'number': '0'},]
         """
-        j_username = 'bjfl'
-        j_password = '88888'
+        j_username = '' # 用户名
+        j_password = '' # 密码
         remember = 'on'
         saveflag = '1'
 
